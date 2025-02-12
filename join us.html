@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Form Page">
+    <title>Higher Education Portal - Join Now</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #1e3358;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        max-width: 150px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #00aaff;
+      }
+
+      h1 {
+        color: #1e3358;
+        margin: 20px 0;
+      }
+
+      .form-section {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #1e3358;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #00aaff;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        background-color: #1e3358;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 30px;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .courses-section {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 40px auto;
+      }
+
+      .courses-section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Dynamic Region and District Loading
+        const regionDistricts = {
+          "Dar es Salaam": ["Ilala", "Kinondoni", "Temeke"],
+          "Arusha": ["Arusha City", "Meru", "Karatu"],
+          "Mwanza": ["Nyamagana", "Ilemela"]
+        };
+
+        $('#region').on('change', function () {
+          const region = $(this).val();
+          const districts = regionDistricts[region] || [];
+          $('#district').empty().append('<option value="">-- Select District --</option>');
+          districts.forEach(function (district) {
+            $('#district').append(`<option value="${district}">${district}</option>`);
+          });
+        });
+
+        // Form Validation
+        $('#application-form').on('submit', function (event) {
+          event.preventDefault();
+          let isValid = true;
+
+          $('.error').text('');
+
+          const name = $('#name').val().trim();
+          const regNumber = $('#reg-number').val().trim();
+          const email = $('#email').val().trim();
+          const password = $('#password').val();
+          const confirmPassword = $('#confirm-password').val();
+
+          if (!name) {
+            $('#nameError').text('Full Name is required.');
+            isValid = false;
+          }
+
+          const regExp = /^BCS-\d{2}-\d{4}-\d{4}$/;
+          if (!regNumber.match(regExp)) {
+            $('#regNumberError').text('Invalid Registration Number. Use format BCS-00-0000-0000.');
+            isValid = false;
+          }
+
+          if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            $('#emailError').text('Invalid email format.');
+            isValid = false;
+          }
+
+          if (password.length < 8 || !/[!@#$%^&*]/.test(password)) {
+            $('#passwordError').text('Password must be at least 8 characters long and include a special character.');
+            isValid = false;
+          }
+
+          if (password !== confirmPassword) {
+            $('#confirmPasswordError').text('Passwords do not match.');
+            isValid = false;
+          }
+
+          if (isValid) {
+            alert('Form submitted successfully!');
+            this.reset();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div>
+        <img src="C:\Users\DOTTO\Desktop\web\images\logo.webp" alt="Higher Learning Institution Logo" class="logo">
+      </div>
+      <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about%20us.html">About Us</a></li>
+            <li><a href="institution.html">Types of Institutions</a></li>
+            <li><a href="program.html">Programs Offered</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact%20us.html">Contact Us</a></li>
+            <li><a href="Join%20us.html">Join Us</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <h1>WELCOME TO JOIN WITH US THE WORLD OF LEARNING</h1>
+
+    <div class="form-section">
+      <h3>JOINING FORM</h3>
+      <form id="application-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name">
+        <div id="nameError" class="error"></div>
+
+        <label for="reg-number">Registration Number:</label>
+        <input type="text" id="reg-number" name="reg-number" placeholder="BCS-00-0000-0000">
+        <div id="regNumberError" class="error"></div>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex">
+          <option value="">-- Select Gender --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <div id="emailError" class="error"></div>
+
+        <label for="region">Region:</label>
+        <select id="region" name="region">
+          <option value="">-- Select Region --</option>
+          <option value="Dar es Salaam">Dar es Salaam</option>
+          <option value="Arusha">Arusha</option>
+          <option value="Dodoma ">Dodoma</option>
+        </select>
+
+        <label for="district">District:</label>
+        <select id="district" name="district">
+          <option value="">-- Select District --</option>
+          <option value="Posta" > Posta Dar es salam</option>
+          <option value="Njiro">Njiro Arusha</option>
+          <option value="Dodoma Mjini">Dodoma Mjini</option>
+        </select>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirm Password" placeholder="Confirm Password" required>
+        <button type="submit Form"
+        >submit form</button>
+      </form>
+    

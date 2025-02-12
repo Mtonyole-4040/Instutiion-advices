@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .steps {
+      background-color: #e9ecef;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .steps p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Application Form</h1>
+
+    <div class="steps">
+      <h3>Application Guidelines</h3>
+      <p><strong>Step 1:</strong> Explore Our Programs - Visit the Programs Offered section to explore the available educational opportunities and find the right fit for you.</p>
+      <p><strong>Step 2:</strong> Prepare Your Application - Gather all required documents, including transcripts, identification, and any other specific requirements for your desired program.</p>
+      <p><strong>Step 3:</strong> Submit Your Application - Fill out and submit your application form below.</p>
+      <p><strong>Step 4:</strong> Application Review - Our admissions team will review your application and contact you if additional information is needed.</p>
+      <p><strong>Step 5:</strong> Receive Admission Decision - You will be notified via email regarding your application status.</p>
+    </div>
+
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="program">Select Program:</label>
+      <select id="program" name="program" required>
+        <option value="">-- Select a Program --</option>
+        <optgroup label="Postgraduate Programs">
+          <option value="Master of Business Administration (MBA)">Master of Business Administration (MBA)</option>
+          <option value="Master of Data Science and Analytics">Master of Data Science and Analytics</option>
+          <option value="Postgraduate Diploma in Education">Postgraduate Diploma in Education</option>
+          <option value="Master of Public Health (MPH)">Master of Public Health (MPH)</option>
+          <option value="Master of Project Management">Master of Project Management</option>
+          <option value="Master of Financial Engineering">Master of Financial Engineering</option>
+        </optgroup>
+        <optgroup label="Bachelor's Degree Programs">
+          <option value="Bachelor of Computer Science">Bachelor of Computer Science</option>
+          <option value="Bachelor of Civil Engineering">Bachelor of Civil Engineering</option>
+          <option value="Bachelor of Business Administration (BBA)">Bachelor of Business Administration (BBA)</option>
+          <option value="Bachelor of Nursing Science">Bachelor of Nursing Science</option>
+          <option value="Bachelor of Information Technology">Bachelor of Information Technology</option>
+          <option value="Bachelor of Environmental Science">Bachelor of Environmental Science</option>
+        </optgroup>
+        <optgroup label="Certification and Short Courses">
+          <option value="Project Management Professional (PMP) Certification">Project Management Professional (PMP) Certification</option>
+          <option value="Certified Ethical Hacker (CEH)">Certified Ethical Hacker (CEH)</option>
+          <option value="Digital Marketing and Analytics Certification">Digital Marketing and Analytics Certification</option>
+          <option value="Graphic Design and Multimedia Course">Graphic Design and Multimedia Course</option>
+          <option value="Supply Chain Management Certification">Supply Chain Management Certification</option>
+          <option value="Cybersecurity Essentials Certification">Cybersecurity Essentials Certification</option>
+        </optgroup>
+      </select>
+
+      <label for="documents">Upload Supporting Documents:</label>
+      <input type="file" id="documents" name="documents" required>
+
+      <label for="message">Additional Information (Optional):</label>
+      <textarea id="message" name="message" rows="4" placeholder="Include any additional information relevant to your application"></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+    <footer style="text-align: center; margin-top: 20px;">
+      &copy; 2025 Hig
+    </footer>
+  </div>
+</body>
+</html>

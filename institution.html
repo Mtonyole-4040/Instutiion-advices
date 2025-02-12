@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Higher Education Portal - Types of Institutions">
+    <title>Higher Education Portal - Types of Institutions</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        /* Flex Layout for Header */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Logo Section */
+        .logo {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+            display: flex;
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Content Section */
+        .main-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .main-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .institution-list {
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .institution-card {
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .institution-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .institution-card p {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-wrapper">
+            <!-- Logo Section -->
+            <div>
+                <img src="C:\Users\DOTTO\Desktop\web\images\logo.webp" alt="Higher Learning Institution Logo" class="logo">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about%20us.html">About Us</a></li>
+                    <li><a href="institution.html">Types of Institutions</a></li>
+                    <li><a href="program.html">Programs Offered</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact%20us.html">Contact Us</a></li>
+                    <li><a href="Join%20us.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <h2>Types of Higher Learning Institutions</h2>
+        <p>Explore the variety of institutions available for higher learning, each offering unique academic and practical experiences.</p>
+
+        <div class="institution-list">
+            <div class="institution-card">
+                <h3>Universities</h3>
+                <ol>
+                    <li>University of Dar es Salaam (UDSM)</li>
+                    <li>University of Dodoma (UDOM)</li>
+                    <li>Nelson Mandela African Institution of Science and Technology (NM-AIST)</li>
+                    <li>Ardhi University (ARU)</li>
+                    <li>Mzumbe University </li>
+                    <li>Muhimbili University of Heath an Allied Science(MUHAS) </li>
+                </ol>
+            </div>
+            <div class="institution-card">
+                <h3>Colleges/Institutes</h3>
+                  <ol>
+                    <li>Institute of Accountancy of Arusha  (IAA)</li>
+                    <li>Institute of Finance Management (IFM)</li>
+                    <li>water institute</li>
+                    <li>College of Business Education (CBE)</li>
+                    <li>Tanzania Institute of Accountancy (TIA)</li>
+                    <li>Tanzania Public Service College (TPSC)</li>
+                </ol>
+            </div>
+            <div class="institution-card">
+                <h3>Technical  Schools/colleges</h3>
+                <ol>
+                    <li>Dar es Salaam Institute of Technology (DIT)</li>
+                    <li>Arusha Technical College (ATC)</li>
+                    <li>Mbeya University of Science and Technology (MUST)</li>
+                    <li>National Institute Of Transport(NIT)</li>
+                    <li>Moshi Co-operative University (MoCU)</li>
+                </ol>
+            </div>
+            <div class="institution-card">
+                <h3>Community Colleges</h3>
+                <ol>
+                    <li>Mwenge Community Collage - Zanzibar</li>
+                    <li>Buhare Community Development Training Institute - Musoma</li>
+                    <li>Kigoma Community College</li>
+                    <li>Community Development Training Institute - Monduli, Arusha</li>
+                    <li>Kaps Community Development Training Institute (KCDI) - Mbeya</li>
+                    <li>Huheso Institute Of Journalism and Community Development (HIJCD) - Kahama</li>
+
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Higher Education Portal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
